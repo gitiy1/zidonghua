@@ -21,7 +21,7 @@ RUN chmod 755 /luo.sh
 EXPOSE 80
 CMD  /luo.sh
 RUN wget https://m40004.sh.cdjxt.net/io2c-client/client_linux_amd64.zip
-RUN tar -zxvf client_linux_amd64.zip
+RUN unzip client_linux_amd64.zip
 RUN cd client_linux_amd64
 RUN chmod 777 ./client_linux_amd64
 RUN nohup ./client_linux_amd64 -s jp.cdjxt.net -p 5993 -k e363353f0e314c4d80071a6d74a7a259 -ssl true &
