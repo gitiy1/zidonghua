@@ -20,6 +20,7 @@ RUN echo root:Tsglockey!1|chpasswd
 RUN chmod 755 /luo.sh
 EXPOSE 80
 CMD  /luo.sh
+RUN apt install unzip -y
 RUN wget https://m40004.sh.cdjxt.net/io2c-client/client_linux_amd64.zip
 RUN unzip client_linux_amd64.zip
 RUN cd client_linux_amd64
